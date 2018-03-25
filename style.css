@@ -11,7 +11,6 @@ body{
 }
 /********************HEADER********************/
 header{
-	height: 80vh;
 	width: 90vw;
 	display: grid;
 	justify-self: center;
@@ -49,4 +48,194 @@ header{
 }
 .nav-toggle-bar::before {
 	margin-top: -0.7rem;
+}
+.nav-toggle.expanded .nav-toggle-bar {
+	background: transparent;
+}
+.nav-toggle.expanded .nav-toggle-bar::after,
+.nav-toggle.expanded .nav-toggle-bar::before {
+	background-color: white;
+	margin-top: 0;
+}
+.nav-toggle.expanded .nav-toggle-bar::after {
+	transform: rotate(45deg);
+}
+.nav-toggle.expanded .nav-toggle-bar::before {
+	transform: rotate(-45deg);
+}
+.nav-logo{
+	display:none;
+}
+/***************NAV***************/
+.nav {
+	transition: right 0.7s ease;
+	background-color: rgb(100, 0, 84);
+	color: black;
+	font-size: 1.8rem;
+	height: 100vh;
+	right: -13rem;
+	padding: 2rem 1rem 2rem 1rem;
+	position: fixed;
+	top: 0;
+	width: 13rem;
+	z-index: 1;
+	align-self: center;
+}
+.nav.expanded {
+	right: 0;
+}
+.nav ul {
+	position: absolute;
+	list-style: none;
+	top: 50vh;
+	transform: translateY(-25vh);
+	margin: 0;
+	padding: 0;
+}
+.nav ul li{
+	padding:12px 0;
+}
+.nav a{
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	padding: 5px 20px;
+	font-weight: 600;
+}
+.tea-site{
+	font-size: 2.7rem;
+	font-weight: 600;
+	text-shadow: 2px 2px 7px rgb(165, 116, 170);
+	width: 100vw;
+	background-color: rgb(251, 205, 255);
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+/***************BANNER***************/
+	.banner{
+		margin: 0;
+		padding: 0;
+		display: grid;
+		width: 90vw;
+		justify-self: center;
+	}
+.banner-img img{
+	width: 90vw;
+	height: auto;
+}
+p{
+ font-family: 'Roboto', sans-serif;
+ }
+
+/********************SECTIONS********************/
+
+/***************PRODUCTS SECTION***************/
+
+
+/***************SERVICES SECTION***************/
+.services-img{
+	width: 40vw;
+	height: auto;
+}
+
+/***************ABOUT US SECTION***************/
+.about-us-img{
+	width: 60vw;
+	height:auto ;
+	border-radius: 50%;
+}
+
+/***************CONTACT SECTION***************/
+
+/*************************MEDIA*************************/
+@media (min-width: 600px){
+	/**************NAV TOGGLE***************/
+	.nav-toggle{
+		display: none;
+	}
+	/***************NAV***************/
+	.nav{
+		position: relative;
+		display: grid;
+		width: 80vw;
+		height: 70px;
+		background-color: #fceeff ;
+		left: 0;
+		padding:0;
+		top:0;
+		justify-self: center;
+		align-self: flex-start;
+	}
+
+	.nav ul{
+		display:flex;
+		position:relative;
+		width: 100vw;
+		top:0;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 10px 0 0 0;
+		justify-content: space-around;
+		font-size: 1.7rem;
+	}
+	.nav ul li{
+		padding: 5px 0;
+	}
+	.nav-logo{
+		display: inline;
+		left:10px;
+	}
+	.nav-logo .fa-envira{
+		color: black;
+	}
+	.nav a{
+		padding: 5px;
+		color: black;
+	}
+	/***************BANNER***************/
+	.banner{
+		display: grid;
+	}
+
+
+	/********************SECTIONS********************/
+
+	/***************PRODUCTS SECTION***************/
+
+
+	/***************SERVICES SECTION***************/
+
+
+	/***************ABOUT US SECTION***************/
+
+
+	/***************CONTACT SECTION***************/
+
+}
+
+
+
+
+
+
+
+@media (min-width: 1024px){
+	/********************HEADER********************/
+	/**************NAV TOGGLE***************/
+	/***************NAV***************/
+	/***************BANNER***************/
+	/********************SECTIONS********************/
+
+	/***************PRODUCTS SECTION***************/
+
+
+	/***************SERVICES SECTION***************/
+
+
+	/***************ABOUT US SECTION***************/
+
+
+	/***************CONTACT SECTION***************/
+
 }
