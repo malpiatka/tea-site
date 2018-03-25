@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+}
+
+html{
+	font-family: 'Merienda', cursive,'Roboto', sans-serif;
+	font-size: 14px;
+}
+body{
+	background-color: #fceeff;
+}
+/********************HEADER********************/
+header{
+	height: 80vh;
+	width: 90vw;
+	display: grid;
+	justify-self: center;
+}
+/**************NAV TOGGLE***************/
+.nav-toggle {
+	cursor: pointer;
+	height: 2rem;
+	right: 1rem;
+	position: fixed;
+	top: 1.2rem;
+	width: 2.5rem;
+	z-index: 10;
+}
+.nav-toggle:hover {
+	opacity: 1;
+}
+.nav-toggle-bar,
+.nav-toggle-bar::after,
+.nav-toggle-bar::before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.7s ease;
+	background-color: black;
+	content: '';
+	height: 0.3rem;
+	width: 100%;
+}
+.nav-toggle-bar {
+	margin-top: 0;
+}
+.nav-toggle-bar::after {
+	margin-top: 0.7rem;
+}
+.nav-toggle-bar::before {
+	margin-top: -0.7rem;
+}
