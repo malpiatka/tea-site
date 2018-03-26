@@ -1,3 +1,4 @@
+//menu expanded
 (function() {
 
     let menu = {
@@ -15,3 +16,4 @@
         menu.doToggle(event);
     });
 }());
+

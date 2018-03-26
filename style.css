@@ -2,88 +2,122 @@
 	box-sizing: border-box;
 }
 
-html{
-	font-family: 'Merienda', cursive,'Roboto', sans-serif;
-	font-size: 14px;
+html {
+	font-family: 'Merienda', cursive, 'Roboto', sans-serif;
+	font-size: 12px;
 }
-body{
+
+body {
 	background-color: #fceeff;
+	overflow-x: hidden;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+
 }
+
 /********************HEADER********************/
-header{
-	width: 90vw;
+
+header {
+	width: 100vw;
 	display: grid;
 	justify-self: center;
+	overflow: hidden;
 }
+
 /**************NAV TOGGLE***************/
+
 .nav-toggle {
+	display: grid;
+	justify-self:center;
 	cursor: pointer;
-	height: 2rem;
-	right: 1rem;
+	height: 24px;
+	right: 5px;
 	position: fixed;
-	top: 1.2rem;
-	width: 2.5rem;
+	top: 10px;
+	width: 60px;
+	height: 40px;
 	z-index: 10;
+	padding: 10px;
+	background-color: rgb(251, 216, 255);
 }
+
 .nav-toggle:hover {
 	opacity: 1;
 }
+
 .nav-toggle-bar,
 .nav-toggle-bar::after,
 .nav-toggle-bar::before {
+	justify-self:center;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	transition: all 0.7s ease;
-	background-color: black;
+	transition: all 0.5s ease;
+	background-color: #41034c;
 	content: '';
-	height: 0.3rem;
-	width: 100%;
+	height: 4px;
+	width: 37px;
 }
+
 .nav-toggle-bar {
 	margin-top: 0;
 }
+
 .nav-toggle-bar::after {
-	margin-top: 0.7rem;
+	margin-top: 9px;
 }
+
 .nav-toggle-bar::before {
-	margin-top: -0.7rem;
+	margin-top: -9px;
 }
+.nav-toggle.expanded{
+	background-color: transparent;
+}
+
 .nav-toggle.expanded .nav-toggle-bar {
 	background: transparent;
 }
+
 .nav-toggle.expanded .nav-toggle-bar::after,
 .nav-toggle.expanded .nav-toggle-bar::before {
 	background-color: white;
 	margin-top: 0;
 }
+
 .nav-toggle.expanded .nav-toggle-bar::after {
 	transform: rotate(45deg);
 }
+
 .nav-toggle.expanded .nav-toggle-bar::before {
 	transform: rotate(-45deg);
 }
-.nav-logo{
-	display:none;
+
+.nav-logo {
+	display: none;
 }
+
 /***************NAV***************/
+
 .nav {
-	transition: right 0.7s ease;
+	transition: right 0.5s ease;
 	background-color: rgb(100, 0, 84);
-	color: black;
-	font-size: 1.8rem;
+	color: #2a0231;
+	font-size: 1.7rem;
 	height: 100vh;
-	right: -13rem;
-	padding: 2rem 1rem 2rem 1rem;
+	right: -150px;
+	padding: 24px 7px;
 	position: fixed;
 	top: 0;
-	width: 13rem;
-	z-index: 1;
+	width: 150px;
 	align-self: center;
+	z-index: 1;
 }
+
 .nav.expanded {
 	right: 0;
 }
+
 .nav ul {
 	position: absolute;
 	list-style: none;
@@ -92,126 +126,228 @@ header{
 	margin: 0;
 	padding: 0;
 }
-.nav ul li{
-	padding:12px 0;
+
+.nav ul li {
+	padding: 12px 5px;
 }
-.nav a{
+
+.nav a {
+	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
 	color: white;
-	padding: 5px 20px;
+	padding: 0.4rem 1rem;
 	font-weight: 600;
 }
-.tea-site{
+
+.tea-site {
 	font-size: 2.7rem;
 	font-weight: 600;
-	text-shadow: 2px 2px 7px rgb(165, 116, 170);
+	color: #2a0231;
+	text-shadow: 2px 2px 5px rgb(189, 133, 194);
 	width: 100vw;
-	background-color: rgb(251, 205, 255);
-	padding: 10px;
+	background-color: rgb(251, 216, 255);
+	padding: 10px 70px 10px 10px;
 	margin-bottom: 10px;
 	text-align: center;
 }
-/***************BANNER***************/
-	.banner{
-		margin: 0;
-		padding: 0;
-		display: grid;
-		width: 90vw;
-		justify-self: center;
-	}
-.banner-img img{
-	width: 90vw;
-	height: auto;
+
+.fa-envira {
+	color: #41034c;
+	margin: 0 10px;
 }
-p{
- font-family: 'Roboto', sans-serif;
- }
 
 /********************SECTIONS********************/
 
+main {
+	display: grid;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	display: grid;
+	justify-self: center;
+	width: 85%;
+	margin: 50px 10px 0 0;
+}
+
+h1 {
+	color: #2a0231;
+	text-shadow: 1px 1px 3px rgb(193, 168, 194);
+	margin: 5px 0;
+}
+
+h3 {
+	color: #2a0231;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
+footer {
+	font-family: 'Merienda', cursive;
+	color: #2a0231;
+}
+
+/***************BANNER SECTION***************/
+
+.banner {
+	grid-gap: 1rem;
+}
+
+.banner-img img {
+	width: 85vw;
+	height: auto;
+	border: 1px solid rgb(225, 200, 229);
+}
+
+.banner p {
+	text-align: justify;
+	margin-bottom: 20px;
+
+}
+
+.banner-link a {
+	text-decoration: none;
+	border: 2px solid #2a0231;
+	background-color: rgb(100, 0, 84);
+	padding: 5px 10px;
+	font-size: 1.4rem;
+	margin: 10px 0;
+	color: white;
+	justify-self: end;
+}
+
+
 /***************PRODUCTS SECTION***************/
+#products article{
+	margin: 5px;
+	padding: 10px;
+	box-shadow: 1px 1px 3px rgb(193, 168, 194);
+}
 
-
+#products p{
+	text-align: justify;
+}
 /***************SERVICES SECTION***************/
-.services-img{
+
+.services-img {
 	width: 40vw;
 	height: auto;
 }
+.accordion-card{
+	box-shadow: 1px 1px 3px rgb(193, 168, 194);
+	margin: 5px 0;
+}
+.accordion-title {
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: 600;
+	border: 2px solid #2a0231;
+	background-color: rgb(100, 0, 84);
+	color: white;
+	padding: 10px 20px;
+	margin: 0 0 10px 0;
+	cursor: pointer;
+}
+
+
+.accordion-content {
+	margin-top: -20px;
+
+	padding: 5px;
+	text-align: justify;
+	overflow: hidden;
+}
+
+.accordion-content p {
+	margin: 0 -25px;
+}
+
+
 
 /***************ABOUT US SECTION***************/
-.about-us-img{
-	width: 60vw;
-	height:auto ;
+
+.about-us-img {
+	width: 50vw;
+	height: auto;
 	border-radius: 50%;
+}
+.about-us-card{
+margin: 5px;
+padding: 10px;
+box-shadow: 1px 1px 3px rgb(193, 168, 194);
 }
 
 /***************CONTACT SECTION***************/
 
+.map {
+	width: 80vw;
+}
+
 /*************************MEDIA*************************/
-@media (min-width: 600px){
+
+@media (min-width: 600px) {
 	/**************NAV TOGGLE***************/
-	.nav-toggle{
+	.nav-toggle {
 		display: none;
 	}
 	/***************NAV***************/
-	.nav{
+	.nav {
 		position: relative;
 		display: grid;
-		width: 80vw;
+		width: 100vw;
 		height: 70px;
-		background-color: #fceeff ;
+		background-color: #fceeff;
 		left: 0;
-		padding:0;
-		top:0;
+		padding: 0;
+		top: 0;
 		justify-self: center;
 		align-self: flex-start;
 	}
 
-	.nav ul{
-		display:flex;
-		position:relative;
+	.nav ul {
+		display: flex;
+		position: relative;
 		width: 100vw;
-		top:0;
+		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
 		margin: 10px 0 0 0;
 		justify-content: space-around;
 		font-size: 1.7rem;
 	}
-	.nav ul li{
+	.nav ul li {
 		padding: 5px 0;
 	}
-	.nav-logo{
+	.nav-logo {
 		display: inline;
-		left:10px;
+		left: 10px;
 	}
-	.nav-logo .fa-envira{
+	.nav-logo .fa-envira {
 		color: black;
 	}
-	.nav a{
+	.nav a {
 		padding: 5px;
-		color: black;
+		font-size: 2rem;
+		color: #2a0231;
+		text-shadow: 2px 2px 5px rgb(189, 133, 194);
 	}
-	/***************BANNER***************/
-	.banner{
-		display: grid;
+	.tea-li,
+	.tea-site {
+		display: none;
 	}
 
 
 	/********************SECTIONS********************/
-
+	/***************BANNER***************/
 	/***************PRODUCTS SECTION***************/
-
-
 	/***************SERVICES SECTION***************/
-
-
 	/***************ABOUT US SECTION***************/
-
-
 	/***************CONTACT SECTION***************/
-
 }
 
 
@@ -220,22 +356,14 @@ p{
 
 
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
 	/********************HEADER********************/
 	/**************NAV TOGGLE***************/
 	/***************NAV***************/
 	/***************BANNER***************/
 	/********************SECTIONS********************/
-
 	/***************PRODUCTS SECTION***************/
-
-
 	/***************SERVICES SECTION***************/
-
-
 	/***************ABOUT US SECTION***************/
-
-
 	/***************CONTACT SECTION***************/
-
 }
