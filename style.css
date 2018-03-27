@@ -14,6 +14,7 @@ body {
     width: 100vw;
     padding: 0;
     margin: 0;
+    line-height: 1.7rem;
 
 }
 
@@ -21,7 +22,7 @@ body {
 
 header {
     width: 100vw;
-    display: grid;
+    display: block;
     justify-self: center;
     overflow: hidden;
 }
@@ -29,8 +30,7 @@ header {
 /**************NAV TOGGLE***************/
 
 .nav-toggle {
-    display: grid;
-    justify-self: center;
+    display: block;
     cursor: pointer;
     height: 24px;
     right: 5px;
@@ -51,7 +51,6 @@ header {
 .nav-toggle-bar,
 .nav-toggle-bar::after,
 .nav-toggle-bar::before {
-    justify-self: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -164,7 +163,6 @@ header {
 /********************SECTIONS********************/
 
 main {
-    display: grid;
     width: 100vw;
     padding: 0;
     margin: 0;
@@ -172,9 +170,9 @@ main {
 
 section {
     display: grid;
-    justify-self: center;
+
     width: 85%;
-    margin: 30px 10px 0 0;
+    margin: 30px auto;
 }
 
 h1 {
@@ -198,15 +196,11 @@ footer {
 
 /***************BANNER SECTION***************/
 
-.banner {
-    grid-gap: 1rem;
-
-}
-
 .banner-img img {
     width: 85vw;
     height: auto;
     border: 1px solid rgb(241, 216, 245);
+    margin-bottom: 2rem;
 }
 
 .banner p {
@@ -245,17 +239,23 @@ footer {
 }
 
 /***************SERVICES SECTION***************/
-#services {
-    overflow: hidden;
-}
 
-.services-img {
+.check-out-img {
     width: 85vw;
     height: auto;
     position: absolute;
     z-index: -1;
     opacity: 0.35;
     overflow: hidden;
+}
+
+.check-out-info1 p {
+    padding: 0 10px;
+    text-align: justify;
+}
+
+.check-out-info2 {
+    display: none;
 }
 
 .accordion {
@@ -269,7 +269,7 @@ footer {
 }
 
 .accordion-title {
-    width: 85vw;
+    width: auto;
     border: 2px solid #2a0231;
     background-color: rgb(100, 0, 84);
     text-align: left;
@@ -312,13 +312,12 @@ footer {
 
 .worker-img {
     display: grid;
-    width: 100%;
     justify-self: center;
     margin: 15px 0;
 }
 
 .about-us-img {
-    width: 50vw;
+    width: 95%;
     height: auto;
     border-radius: 50%;
     margin: 5px auto;
@@ -334,6 +333,14 @@ footer {
 }
 
 /***************CONTACT SECTION***************/
+#contact {
+    justify-items: center;
+}
+
+.contact-content {
+    width: 85vw;
+}
+
 .contact-img {
     width: 85vw;
     height: auto;
@@ -392,6 +399,10 @@ textarea {
 
 input:focus, textarea:focus {
     background-color: #f2f2f2;
+}
+
+adress {
+    text-align: center;
 }
 
 .contact-map {
@@ -482,8 +493,29 @@ input:focus, textarea:focus {
 
     /***************PRODUCTS SECTION***************/
     #products {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
+    }
+
+    #products article {
+        padding: 2vw;
+    }
+
+    /***************ABOUT US SECTION***************/
+    #about-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .about-us-card article p {
+        text-align: center;
+        padding: 0 2vw;
+    }
+
+    .about-us-card article footer {
+        padding: 0 2vw;
     }
 
     /***************CONTACT SECTION***************/
@@ -513,7 +545,7 @@ input:focus, textarea:focus {
     }
 
     .banner-img img {
-        margin-top: 10vh;
+        margin-top: 7vh;
         width: 50vw;
         position: absolute;
     }
@@ -521,6 +553,8 @@ input:focus, textarea:focus {
     .banner .content {
         width: 50vw;
         position: relative;
+        font-size: 1.35rem;
+        font-weight: 400;
         justify-self: end;
         padding: 1.5vh 2vw 3vh 17vw;
         margin-bottom: 10vh;
@@ -532,6 +566,10 @@ input:focus, textarea:focus {
         text-align: right;
     }
 
+    .banner-link a {
+        font-size: 1.7rem;
+    }
+
     /********************SECTIONS********************/
     /***************PRODUCTS SECTION***************/
     #products {
@@ -540,12 +578,34 @@ input:focus, textarea:focus {
     }
 
     /***************SERVICES SECTION***************/
-    #service {
+    #check-out {
+        display: grid;
         grid-template-columns: 1fr 2fr;
         grid-gap: 1rem;
     }
 
-    .services-img {
+    .check-out-info1 {
+        display: none;
+    }
+
+    .check-out-info2 {
+        display: grid;
+    }
+
+    .check-out-info2 h1 {
+        text-align: right;
+        padding: 0 10px;
+        font-size: 2.3rem;
+    }
+
+    .check-out-info2 p {
+        padding: 0 10px;
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+
+    .check-out-img {
+        margin-top: 3.8rem;
         opacity: 1;
         width: 35vw;
         height: auto;
@@ -553,11 +613,16 @@ input:focus, textarea:focus {
         border: 1px solid rgb(241, 216, 245);
     }
 
-    /***************ABOUT US SECTION***************/
-    #about-us {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
+    .accordion {
+        margin-top: 0;
+    }
+
+    .accordion-card {
+        margin: 0;
+        margin-bottom: 5px;
+        width: auto;
     }
 
     /***************CONTACT SECTION***************/
+
 }
