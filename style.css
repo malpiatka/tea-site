@@ -174,7 +174,7 @@ section {
     display: grid;
     justify-self: center;
     width: 85%;
-    margin: 50px 10px 0 0;
+    margin: 30px 10px 0 0;
 }
 
 h1 {
@@ -200,6 +200,7 @@ footer {
 
 .banner {
     grid-gap: 1rem;
+
 }
 
 .banner-img img {
@@ -234,7 +235,7 @@ footer {
 
 /***************PRODUCTS SECTION***************/
 #products article {
-    margin: 5px;
+    margin: 8px 0;
     padding: 10px;
     box-shadow: 1px 1px 3px rgb(193, 168, 194);
 }
@@ -244,7 +245,9 @@ footer {
 }
 
 /***************SERVICES SECTION***************/
-
+#services {
+    overflow: hidden;
+}
 .services-img {
     width: 85vw;
     height: auto;
@@ -255,7 +258,7 @@ footer {
 }
 
 .accordion {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .accordion-card {
@@ -294,9 +297,12 @@ footer {
 }
 
 /***************ABOUT US SECTION***************/
-
+#about-us{
+    background-color: #fceeff;
+    padding-top: 40px;
+}
 .about-us-card {
-    margin: 5px;
+    margin: 5px 0;
     padding: 10px;
     box-shadow: 1px 1px 3px rgb(193, 168, 194);
     background-color: #fceeff;
@@ -326,6 +332,9 @@ footer {
 }
 
 /***************CONTACT SECTION***************/
+#contact{
+    overflow: hidden;
+}
 .contact-img {
     width: 85vw;
     height: auto;
@@ -338,12 +347,12 @@ form{
     display: grid;
     justify-self:center;
     font-size: 1em;
+    margin-top: 10px;
 }
 input {
     justify-self: center;
-    width: 80vw;
+    width: 83vw;
     text-decoration: none;
-    background-color: #f6f6f6;
     color: #1F1D1D;
     margin: 5px 0;
     padding: 5px;
@@ -366,7 +375,8 @@ input:last-of-type{
 textarea{
     display: grid;
     justify-self: center;
-    width: 80vw;
+    width: 83vw;
+    height: 20vh;
     margin: 5px 0;
     padding: 5px;
     border: none;
@@ -381,11 +391,22 @@ input:focus, textarea:focus {
 .map {
     width: 85vw;
     height: 30vh;
+    margin: 0;
 }
-
+/***************FOOTER***************/
+.copyright{
+    color: #2a0231;
+    text-shadow: 2px 2px 5px rgb(189, 133, 194);
+    width: 100vw;
+    background-color: rgb(251, 216, 255);
+    padding: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+}
 /*************************MEDIA*************************/
 
 @media (min-width: 600px) {
+    html{font-size: 14px;}
     /**************NAV TOGGLE***************/
     .nav-toggle {
         display: none;
@@ -401,7 +422,7 @@ input:focus, textarea:focus {
         left: 0;
         padding: 0;
         top: 0;
-        justify-self: center;
+        justify-self: start;
         align-self: flex-start;
     }
 
@@ -423,16 +444,17 @@ input:focus, textarea:focus {
 
     .nav-logo {
         display: inline;
-        left: 10px;
+        left: 5px;
     }
 
     .nav-logo .fa-envira {
-        color: black;
+        color: #2a0231;
+        margin:0 3px;
     }
 
     .nav a {
         padding: 5px;
-        font-size: 2rem;
+        font-size: 1.7rem;
         color: #2a0231;
         text-shadow: 2px 2px 5px rgb(189, 133, 194);
     }
@@ -442,19 +464,28 @@ input:focus, textarea:focus {
         display: none;
     }
 
-    /********************SECTIONS********************/
-    /***************BANNER***************/
     /***************PRODUCTS SECTION***************/
-    /***************SERVICES SECTION***************/
-    /***************ABOUT US SECTION***************/
+    #products{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
     /***************CONTACT SECTION***************/
+    textarea{
+        height: 25vh;
+    }
+    .map{
+        height: 40vh;
+    }
 }
 
-@media (min-width: 1024px) {
-    /********************HEADER********************/
-    /**************NAV TOGGLE***************/
+@media (min-width: 860px) {
     /***************NAV***************/
+    .nav a{
+        font-size: 1.3em;
+    }
     /***************BANNER***************/
+
     /********************SECTIONS********************/
     /***************PRODUCTS SECTION***************/
     /***************SERVICES SECTION***************/
