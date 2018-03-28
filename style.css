@@ -32,7 +32,6 @@ header {
 .nav-toggle {
     display: block;
     cursor: pointer;
-    height: 24px;
     right: 5px;
     position: fixed;
     top: 10px;
@@ -143,6 +142,10 @@ header {
     font-weight: 600;
 }
 
+.nav a:hover {
+    text-decoration: underline;
+}
+
 .tea-site {
     font-size: 2.7rem;
     font-weight: 600;
@@ -227,11 +230,27 @@ footer {
     box-shadow: 1px 1px 3px rgb(193, 168, 194);
 }
 
+.banner-link a {
+    border: 2px solid #63026b;
+    background-color: rgb(151, 0, 133);
+    box-shadow: 2px 2px 7px rgb(137, 95, 135);
+}
+
 /***************PRODUCTS SECTION***************/
 #products article {
     margin: 8px 0;
     padding: 10px;
     box-shadow: 1px 1px 3px rgb(193, 168, 194);
+}
+
+#products article:hover {
+    box-shadow: 2px 2px 7px rgb(137, 95, 135);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+#products h1:hover {
+    text-decoration: underline;
 }
 
 #products p {
@@ -281,8 +300,10 @@ footer {
     cursor: pointer;
 }
 
-.accordion-title .fa-plus {
-    margin-left: 20px;
+.accordion-title .fa-arrow-circle-down {
+    margin: 0 0 0 20px;
+    padding: 0;
+    font-size: 1.5rem;
 }
 
 .accordion-content {
@@ -326,6 +347,10 @@ footer {
 
 .about-us-card article {
     text-align: center;
+}
+
+.about-us-card article h1:hover {
+    text-decoration: none;
 }
 
 .about-us-card article footer {
@@ -376,12 +401,17 @@ input[type="submit"] {
     background-color: rgb(100, 0, 84);
     padding: 5px 10px;
     font-size: 1.4rem;
-    margin: 5px auto;
+    margin: 5px auto 20px auto;
     color: white;
     font-family: 'Merienda', cursive;
     width: 100px;
     box-shadow: 1px 1px 3px rgb(193, 168, 194);
-    margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+    border: 2px solid #63026b;
+    background-color: rgb(151, 0, 133);
+    box-shadow: 2px 2px 7px rgb(137, 95, 135);
 }
 
 textarea {
@@ -483,7 +513,7 @@ adress {
         padding: 5px;
         font-size: 1.7rem;
         color: #2a0231;
-        text-shadow: 2px 2px 5px rgb(189, 133, 194);
+        text-shadow: 1px 1px 3px rgb(189, 133, 194);
     }
 
     .tea-li,
@@ -541,29 +571,39 @@ adress {
 
     /***************BANNER***************/
     #banner {
-        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .banner-img {
+        grid-column: 1/span 3;
+        grid-row: 2 / span 3;
     }
 
     .banner-img img {
-        margin-top: 7vh;
         width: 50vw;
-        position: absolute;
+        margin: -7rem 0 0 0;
+        padding: 0;
     }
 
     .banner .content {
-        width: 50vw;
-        position: relative;
-        font-size: 1.35rem;
-        font-weight: 400;
-        justify-self: end;
-        padding: 1.5vh 2vw 3vh 17vw;
-        margin-bottom: 10vh;
+        width: auto;
+        grid-column: 3 / span 3;
+        grid-row: 1 / span 2;
         box-shadow: 1px 1px 3px rgb(193, 168, 194);
+        font-size: 1.25rem;
+        padding: 2rem 2rem 2rem 20vw;
         z-index: -1;
+    }
+
+    .banner .content {
+
     }
 
     .banner .content h1 {
         text-align: right;
+        margin-bottom: 1.5rem;
     }
 
     .banner-link a {
@@ -618,11 +658,12 @@ adress {
     }
 
     .accordion-card {
-        margin: 0;
-        margin-bottom: 5px;
+        margin: 0 0 5px 0;
         width: auto;
     }
 
     /***************CONTACT SECTION***************/
-
+    .map {
+        height: 60vh;
+    }
 }
