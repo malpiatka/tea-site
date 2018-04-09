@@ -184,6 +184,11 @@ h1 {
     margin: 5px 0;
 }
 
+.section-title{
+    font-size: 3.5rem;
+    margin: 15px;
+}
+
 h3 {
     color: #2a0231;
 }
@@ -230,7 +235,7 @@ footer {
     box-shadow: 1px 1px 3px rgb(193, 168, 194);
 }
 
-.banner-link a {
+.banner-link a:hover {
     border: 2px solid #63026b;
     background-color: rgb(151, 0, 133);
     box-shadow: 2px 2px 7px rgb(137, 95, 135);
@@ -431,7 +436,7 @@ input:focus, textarea:focus {
     background-color: #f2f2f2;
 }
 
-adress {
+.adress {
     text-align: center;
 }
 
@@ -597,10 +602,6 @@ adress {
         z-index: -1;
     }
 
-    .banner .content {
-
-    }
-
     .banner .content h1 {
         text-align: right;
         margin-bottom: 1.5rem;
@@ -608,6 +609,12 @@ adress {
 
     .banner-link a {
         font-size: 1.7rem;
+    }
+
+    .banner-link a:hover {
+        border: 2px solid #63026b;
+        background-color: rgb(151, 0, 133);
+        box-shadow: 2px 2px 7px rgb(137, 95, 135);
     }
 
     /********************SECTIONS********************/
@@ -663,6 +670,36 @@ adress {
     }
 
     /***************CONTACT SECTION***************/
+    form {
+        width: 40vw;
+    }
+    .contact-content{
+        width:85vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    input {
+        width: 50vw;
+        margin-left: 1vw;
+    }
+
+    textarea {
+        width: 50vw;
+        height: 30vh;
+        margin-left: 1vw;
+    }
+    input[type="submit"] {
+        margin-top: 20px;
+    }
+
+    .adress {
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        font-weight: 600;
+        margin-left: 2vw;
+        margin-bottom: 5vh;
+    }
     .map {
         height: 60vh;
     }
