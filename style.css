@@ -651,6 +651,7 @@ input:focus, textarea:focus {
         padding: 0 10px;
         text-align: justify;
         font-size: 1.3rem;
+        line-height: 2rem;
     }
 
     .check-out-img {
@@ -711,13 +712,13 @@ input:focus, textarea:focus {
 
     .banner-img img {
         width: 45vw;
-        margin: -6.5rem 0 0 0;
+        margin: -8rem 0 0 0;
     }
 
     .banner .content {
-        font-size: 1.6rem;
-        padding: 3rem 3rem 3rem 18vw;
-        z-index: -1;
+        font-size: 1.7rem;
+        padding: 4rem 4rem 4rem 18vw;
+        line-height: 2.5rem;
     }
 
     .banner .content h1 {
