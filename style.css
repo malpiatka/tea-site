@@ -262,7 +262,7 @@ footer {
     text-align: justify;
 }
 
-/***************SERVICES SECTION***************/
+/***************CHECK OUT SECTION***************/
 
 .check-out-img {
     width: 85vw;
@@ -587,8 +587,8 @@ input:focus, textarea:focus {
     }
 
     .banner-img img {
-        width: 50vw;
-        margin: -7rem 0 0 0;
+        width: 45vw;
+        margin: -7.5rem 0 0 0;
         padding: 0;
     }
 
@@ -597,18 +597,20 @@ input:focus, textarea:focus {
         grid-column: 3 / span 3;
         grid-row: 1 / span 2;
         box-shadow: 1px 1px 3px rgb(193, 168, 194);
-        font-size: 1.25rem;
-        padding: 2rem 2rem 2rem 20vw;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 1rem 1rem 1rem 17vw;
         z-index: -1;
     }
 
     .banner .content h1 {
         text-align: right;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .banner-link a {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
+        padding: 2px 5px;
     }
 
     .banner-link a:hover {
@@ -624,7 +626,7 @@ input:focus, textarea:focus {
         grid-gap: 1rem;
     }
 
-    /***************SERVICES SECTION***************/
+    /***************CHECK OUT SECTION***************/
     #check-out {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -642,13 +644,13 @@ input:focus, textarea:focus {
     .check-out-info2 h1 {
         text-align: right;
         padding: 0 10px;
-        font-size: 2.3rem;
+        font-size: 3.3rem;
     }
 
     .check-out-info2 p {
         padding: 0 10px;
         text-align: justify;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .check-out-img {
@@ -703,4 +705,30 @@ input:focus, textarea:focus {
     .map {
         height: 60vh;
     }
+}
+
+@media (min-width: 1000px){
+
+    .banner-img img {
+        width: 45vw;
+        margin: -6.5rem 0 0 0;
+    }
+
+    .banner .content {
+        font-size: 1.6rem;
+        padding: 3rem 3rem 3rem 18vw;
+        z-index: -1;
+    }
+
+    .banner .content h1 {
+        margin-bottom: 2.5rem;
+        font-size: 3.3rem;
+    }
+
+    .banner-link a {
+        margin-top: 2rem;
+        font-size: 2rem;
+        padding: 10px 25px;
+    }
+
 }
