@@ -266,8 +266,9 @@ footer {
 
 .check-out-img {
     width: 85vw;
-    height: auto;
+    height: 100%;
     position: absolute;
+    object-fit: cover;
     z-index: -1;
     opacity: 0.35;
     overflow: hidden;
@@ -365,6 +366,7 @@ footer {
 /***************CONTACT SECTION***************/
 #contact {
     justify-items: center;
+    height: 100%;
 }
 
 .contact-content {
@@ -373,8 +375,9 @@ footer {
 
 .contact-img {
     width: 85vw;
-    height: auto;
+    height: 100%;
     position: absolute;
+    object-fit: cover;
     z-index: -1;
     opacity: 0.4;
 }
